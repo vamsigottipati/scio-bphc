@@ -1,8 +1,6 @@
 <template>
   <div class="body">
-  <!--  <div class="logo">
-      <img src="../assets/logo.png" class="fadeInDown">
-    </div> -->
+
     <div class="wrapper fadeInDown">
       <div id="formContent">
         <!-- Tabs Titles -->
@@ -15,7 +13,6 @@
           <input type="submit" class="fadeIn fourth" @click.prevent="examRoute" style="margin-top:3vh;" value="Take Exam">
         </form>
 
-        <!-- Remind Passowrd -->
         <div id="formFooter">
           <a class="underlineHover" href="./instructions">Instructions </a>
         </div>
@@ -107,13 +104,9 @@ h1 {
 
 /* TABS */
 
-h1.inactive {
-  color: #cccccc;
-}
-
 h1.active {
   color: #0d0d0d;
-  border-bottom: 2px solid #5fbae9;
+  border-bottom: 4px solid #5fbae9;
 }
 
 /* FORM TYPOGRAPHY*/

@@ -3,6 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import VueResource from 'vue-resource'
+import * as firebase from 'firebase'
+
+Vue.use(VueResource)
 
 Vue.config.productionTip = false
 
@@ -11,5 +15,15 @@ new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  created () {
+    firebase.initializeApp({
+      apiKey: 'AIzaSyCjBA4qAd6wljRUD57j-rU_FaEf0JlrFoQ',
+      authDomain: 'set2-scio.firebaseapp.com',
+      databaseURL: 'https://set2-scio.firebaseio.com',
+      projectId: 'set2-scio',
+      storageBucket: 'set2-scio.appspot.com',
+      messagingSenderId: '739253068031'
+    })
+  }
 })

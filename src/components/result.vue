@@ -3,27 +3,27 @@
     <div class="container">
       <div class="left">
         <div class="profile">
-          <p style="margin-top:7vh;font-size:2rem;">Name</p>
-          <span style="font-weight: 200;">Registration Number</span>
+          <p style="margin-top:7vh;font-size:2rem;">{{name}}</p>
+          <span style="font-weight: 200;">{{regNum}}</span>
         </div>
         <div class="actions">
-          <span class="marks">Marks</span>
+          <span class="marks">{{total}} Marks</span>
         </div>
         <!-- <span class="btn" style="margin-top:30vh;">Exit</span> -->
       </div>
 
       <div class="right">
         <a class="right-box">
-          <p>10</p>
+          <p>{{mathMarks}}</p>
           <span>Math</span>
         </a>
         <a class="right-box">
-          <p>10</p>
+          <p>{{engMarks}}</p>
           <span>English</span>
         </a>
         <a class="right-box">
-          <p>10</p>
-          <span>Other</span>
+          <p>{{aptMarks}}</p>
+          <span>Aptitude</span>
         </a>
       </div>
     </div>
@@ -35,7 +35,18 @@ export default {
   name: 'Result',
   data () {
     return {
+      name: '',
+      regNum: '',
+      mathMarks: '',
+      engMarks: '',
+      aptMarks: '',
+      total: '0',
     }
+  },
+  mounted () {
+      this.name = sessionStorage.getItem('name')
+      this.regNum = sessionStorage.getItem('regNum')
+      sessionStorage.setItem('pagename', window.location.pathname)
   }
 }
 </script>

@@ -4,6 +4,9 @@ import home from '@/components/home'
 import exam from '@/components/exam'
 import result from '@/components/result'
 import instructions from '@/components/instructions'
+import test from '@/components/test'
+import examGaurd from './examgaurd'
+import resultGaurd from './resultgaurd'
 
 Vue.use(Router)
 
@@ -28,7 +31,12 @@ export default new Router({
       path: '/instructions',
       name: 'instructions',
       component: instructions
-    }
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: test
+    },
   ],
   mode: 'history'
 })

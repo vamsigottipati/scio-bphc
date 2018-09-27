@@ -25,7 +25,7 @@
 
 <script>
 
-import db from './firebaseINIT.js'
+import db from './firebaseInit.js'
 
 export default {
   name: 'Home',
@@ -40,10 +40,10 @@ export default {
     examRoute () {
       if (this.name != null) {
         if (this.regNum != null) {
-          db.ref('users/' + this.regNum).set({
+           db.ref('users/' + this.regNum).set({
             name: this.name,
             regnum: this.regNum
-          })
+          }) 
           this.$router.push('exam')
           sessionStorage.setItem('name' , this.name)
           sessionStorage.setItem('regNum' , this.regNum)

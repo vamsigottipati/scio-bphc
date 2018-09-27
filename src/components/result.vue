@@ -46,6 +46,7 @@ export default {
   mounted () {
       this.name = sessionStorage.getItem('name')
       this.regNum = sessionStorage.getItem('regNum')
+      this.total = sessionStorage.getItem('marks')
       sessionStorage.setItem('pagename', window.location.pathname)
   }
 }
